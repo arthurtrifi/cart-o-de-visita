@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartão de Visita</title>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (opcional se quiser usar os ícones via classes) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-8QH5ly6cDPzXIV9Z7Fh4ogZrHa6CWIZzpoZ3rX9V4b3zjOtLRJ9+nvW7pl8AWhT1uCh8J7qxG0e62jz3D9Q+3g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: url('background.jpg') no-repeat center center/cover;
+      width: 90vw;
+      max-width: 400px;
+      height: 80vh;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+      font-weight: 300;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .icons a {
+      text-decoration: none;
+    }
+
+    .icons button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: #ffffff20;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background 0.3s, transform 0.3s;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    .icons button:hover {
+      background: #e91e63;
+      transform: scale(1.05);
+    }
+
+    .icons img {
+      height: 20px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .content h1 {
+        font-size: 1.5rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #ccc;
+    }
+
+    @media (min-height: 800px) {
+      footer {
+        position: static;
+        margin-top: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Stefany Landim</h1>
+      <p>Hapvida & NotreDame</p>
+      <div class="icons">
+        <a href="https://www.instagram.com/stefanyhapvidasaude/" target="_blank"><button><img src="icon_instagram.png" alt="Instagram"> Instagram</button></a>
+
+        <a href="https://api.whatsapp.com/send/?phone=5588988462652&text&type=phone_number&app_absent=0" target="_blank"><button><img src="phone_icon.png" alt="Telefone"> Contato</button></a>
+
+        <a href="#"><button><img src="mail_icon.png" alt="Email"> Email</button></a>
+      </div>
+    </div>
+    <footer>
+        <p>Se você não parar para cuidar da sua saúde, um dia a sua saúde para pra você cuidar dela.</p>
+    </footer>
+  </div>
+</body>
+</html>
